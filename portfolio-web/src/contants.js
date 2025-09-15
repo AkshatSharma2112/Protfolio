@@ -19,15 +19,16 @@ import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 
 // Experience Section Logo's
-
+import hashedbitLogo from './assets/education_logo/hashedbit_logo.png';
 
 // Education Section Logo's
 import ditLogo from './assets/education_logo/dit_logo.png';
 import sriLogo from './assets/education_logo/sri_logo.jpeg';
 import cbsLogo from './assets/education_logo/cbs_logo.png';
 
-// Project Section Logo's
 
+// Project Section Logo's
+import farmaidlogo from './assets/work_logo/farmaid_logo.png';
 
 
 export const SkillsInfo = [
@@ -73,18 +74,18 @@ export const SkillsInfo = [
 ];
 
   export const experiences = [
-    // {
-    //   id: ,
-    //   img: ,
-    //   role: "",
-    //   company: "",
-    //   date: "",
-    //   desc: "",
-    //   skills: [
-    //     "",
+    {
+      id: 0,
+      img: hashedbitLogo,
+      role: "Intern - MERN",
+      company: "HashedBit Inovations",
+      date: "",
+      desc: "",
+      skills: [
+        "",
         
-    //   ],
-    // },
+      ],
+    },
   ];
   
   export const education = [
@@ -118,16 +119,16 @@ export const SkillsInfo = [
   ];
   
   export const projects = [
-    // {
-    //   id: 0,
-    //   title: "GitHub Profile Detective",
-    //   description:
-    //     "A powerful and user-friendly React.js application designed to uncover and showcase detailed GitHub profile information. Simply enter a GitHub username, and the app fetches comprehensive data, including profile stats, repositories, followers, and contributions. The intuitive interface ensures a seamless experience, making it a must-visit tool for developers and recruiters.",
-    //   image: githubdetLogo,
-    //   tags: ["HTML", "CSS", "JavaScript", "React JS", "API"],
-    //   github: "https://github.com/codingmastr/GitHub-Profile-Search-App-Using-React-JS",
-    //   webapp: "https://githubprofiledetective.netlify.app/",
-    // },
+    {
+      id: 0,
+      title: "FarmAid",
+      description:
+        "Developed and deployed a web platform that assists farmers through an interactive chatbot and AI-powered plant disease or pest detection. Built using React.js and integrated with ML models to provide real-time, accurate responses and crop health verification.",
+      image: farmaidlogo,
+      tags: ["HTML", "CSS", "JavaScript", "React JS", "Python"],
+      github: "https://github.com/AkshatSharma2112/FarmAid-Web",
+      webapp: "https://farm-aid-web.vercel.app/",
+    },
     // {
     //   id: 1,
     //   title: "CS Prep",

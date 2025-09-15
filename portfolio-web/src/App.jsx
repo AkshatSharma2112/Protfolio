@@ -7,10 +7,12 @@ import Navbar from './components/Navbar/Navbar'
 import Skills from './components/Skills/Skills'
 import Work from './components/Work/Work'
 import Education from './components/Education/Education'
+import BlurBlob from './components/BlurBlob'
 
 function App() {
   return (
     <div className="bg-[#050414]">
+      <BlurBlob position={{ top: '35%', left: '20%' }} size={{ width: '30%', height: '40%' }} />
       {/* Background Grid */}
       <div className="absolute inset-0 
         bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] 
@@ -22,9 +24,9 @@ function App() {
       <div className="relative z-10 pt-20 text-white">
         <Navbar />
         <About />
+        <Skills />
         <Experience />
         <Education />
-        <Skills />
         <Work />
         <Contact />
         <Footer />
