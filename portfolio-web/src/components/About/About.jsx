@@ -7,9 +7,9 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className="py-4 px-[4vw] md:px-[6vw] lg:px-[10vw] font-sans mt-8 md:mt-12 lg:mt-16"
     >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
+      <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 lg:gap-20">
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
@@ -28,10 +28,11 @@ const About = () => {
             <span className="text-[#8245ec]">
               <Typewriter
                 words={[
-                  'Fullstack Developer',
-                  'App Developer',
-                  'UI/UX Designer',
-                  'Coder',
+                  'Beginner Coder',
+                  'Curious Learner',
+                  'Future Developer',
+                  'Tech Explorer',
+                  'Student of Code',
                 ]}
                 loop={true}
                 cursor
@@ -45,7 +46,14 @@ const About = () => {
 
           {/* About Me Paragraph */}
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I'm a final-year B.Tech Computer Science student at DIT University, specializing in Artificial Intelligence, Machine Learning, and Robotics. I'm passionate about building innovative solutions and intelligent systems that address real-world challenges. With hands-on experience in Java, Python, and modern frameworks, I'm a quick learner and collaborative team player, always driven by curiosity, creativity, and a deep passion for technology and innovation.
+            I'm a final-year B.Tech Computer Science student at DIT University,
+            specializing in Artificial Intelligence, Machine Learning, and
+            Robotics. I'm passionate about building innovative solutions and
+            intelligent systems that address real-world challenges. With
+            hands-on experience in Java, Python, and modern frameworks, I'm a
+            quick learner and collaborative team player, always driven by
+            curiosity, creativity, and a deep passion for technology and
+            innovation.
           </p>
 
           {/* Resume Button */}

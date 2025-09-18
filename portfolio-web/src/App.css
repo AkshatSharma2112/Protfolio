@@ -1,0 +1,5 @@
+.zoom-wrapper {
+  transform: scale(0.75);   /* 75% size */
+  transform-origin: top center; /* Keeps it centered */
+  width: 133.33%;           /* Compensate so layout doesn't shrink too much */
+}

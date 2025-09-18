@@ -8,6 +8,9 @@ import Skills from './components/Skills/Skills'
 import Work from './components/Work/Work'
 import Education from './components/Education/Education'
 import BlurBlob from './components/BlurBlob'
+import './App.css'
+
+
 
 function App() {
   return (
