@@ -1,148 +1,67 @@
-import React, { useState, useEffect } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+// src/components/Skills/Skills.jsx
+import React from "react";
+import { SkillsInfo } from "../../contants";
+import Tilt from "react-parallax-tilt";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
-  const [isScrolled, setIsScrolled] = useState(false);
+const Skills = () => (
+  <section
+    id="skills"
+    className="py-12 px-[5vw] md:px-[7vw] lg:px-[12vw] font-sans bg-skills-gradient clip-path-custom"
+  >
+    {/* Section Title */}
+    <div className="text-center mb-8">
+      <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
+      <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
+      <p className="text-gray-400 mt-4 text-base sm:text-lg font-medium max-w-2xl mx-auto">
+        A collection of my technical skills and expertise honed through various projects and experiences
+      </p>
+    </div>
 
-  // Detect scroll and change navbar background
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    {/* Skill Categories in Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {SkillsInfo.map((category) => (
+        <div
+          key={category.title}
+          className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 rounded-2xl border border-white 
+          shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
+        >
+          {/* Category Title */}
+          <h3 className="text-2xl sm:text-3xl font-semibold text-gray-300 mb-6 text-center">
+            {category.title}
+          </h3>
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Smooth scroll function
-  const handleMenuItemClick = (sectionId) => {
-    setActiveSection(sectionId);
-    setIsOpen(false);
-
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const menuItems = [
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-    { id: "experience", label: "Experience" },
-    { id: "work", label: "Projects" },
-    { id: "education", label: "Education" },
-  ];
-
-  return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
-      }`}
-    >
-      <div className="text-white py-5 flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-lg font-semibold cursor-pointer">
-          <span className="text-[#8245ec]">&lt;</span>
-          <span className="text-white">Akshat</span>
-          <span className="text-[#8245ec]">/</span>
-          <span className="text-white">Sharma</span>
-          <span className="text-[#8245ec]">&gt;</span>
-        </div>
-
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
-          {menuItems.map((item) => (
-            <li
-              key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] ${
-                activeSection === item.id ? "text-[#8245ec]" : ""
-              }`}
-            >
-              <button onClick={() => handleMenuItemClick(item.id)}>
-                {item.label}
-              </button>
-            </li>
-          ))}
-        </ul>
-
-        {/* Social Icons */}
-        <div className="hidden md:flex space-x-4">
-          <a
-            href="https://github.com/AkshatSharma2112"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+          {/* Skills */}
+          <Tilt
+            tiltMaxAngleX={20}
+            tiltMaxAngleY={20}
+            perspective={1000}
+            scale={1.05}
+            transitionSpeed={1000}
+            gyroscope={true}
           >
-            <FaGithub size={24} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/akshat-sharma-873862246/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
-          >
-            <FaLinkedin size={24} />
-          </a>
-        </div>
-
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden">
-          {isOpen ? (
-            <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
-              onClick={() => setIsOpen(false)}
-            />
-          ) : (
-            <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
-              onClick={() => setIsOpen(true)}
-            />
-          )}
-        </div>
-      </div>
-
-      {/* Mobile Menu Items */}
-      {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
-            {menuItems.map((item) => (
-              <li
-                key={item.id}
-                className={`cursor-pointer hover:text-white ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
-                }`}
-              >
-                <button onClick={() => handleMenuItemClick(item.id)}>
-                  {item.label}
-                </button>
-              </li>
-            ))}
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/AkshatSharma2112"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaGithub size={24} />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/akshat-sharma-873862246/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-300 hover:text-white"
-              >
-                <FaLinkedin size={24} />
-              </a>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {category.skills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 
+                             rounded-3xl py-2 px-3 sm:py-3 sm:px-4 text-center min-w-[100px] break-words"
+                >
+                  <img
+                    src={skill.logo}
+                    alt={`${skill.name} logo`}
+                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 flex-shrink-0"
+                  />
+                  <span className="text-xs sm:text-sm md:text-base text-gray-300 break-words">
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
             </div>
-          </ul>
+          </Tilt>
         </div>
-      )}
-    </nav>
-  );
-};
+      ))}
+    </div>
+  </section>
+);
 
-export default Navbar;
+export default Skills;
