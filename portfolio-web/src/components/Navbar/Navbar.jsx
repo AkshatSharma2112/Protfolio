@@ -1,67 +1,73 @@
-// src/components/Skills/Skills.jsx
 import React from "react";
-import { SkillsInfo } from "../../contants";
-import Tilt from "react-parallax-tilt";
+import Logo from "../../assets/logo.png";
 
-const Skills = () => (
-  <section
-    id="skills"
-    className="py-12 px-[5vw] md:px-[7vw] lg:px-[12vw] font-sans bg-skills-gradient clip-path-custom"
-  >
-    {/* Section Title */}
-    <div className="text-center mb-8">
-      <h2 className="text-3xl sm:text-4xl font-bold text-white">SKILLS</h2>
-      <div className="w-24 h-1 bg-[#8245ec] mx-auto mt-2"></div>
-      <p className="text-gray-400 mt-4 text-base sm:text-lg font-medium max-w-2xl mx-auto">
-        A collection of my technical skills and expertise honed through various projects and experiences
-      </p>
-    </div>
+const Navbar = () => {
+  return (
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#050414]/70 border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="flex items-center justify-between h-16">
+          
+          {/* Logo / Name */}
+          <div className="text-white font-bold text-xl tracking-wide">
+            <img src={Logo} alt="Logo" className="w-20 h-20 mr-2 inline-block" />
+          </div>
 
-    {/* Skill Categories in Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      {SkillsInfo.map((category) => (
-        <div
-          key={category.title}
-          className="bg-gray-900 backdrop-blur-md px-6 sm:px-10 py-8 rounded-2xl border border-white 
-          shadow-[0_0_20px_1px_rgba(130,69,236,0.3)]"
-        >
-          {/* Category Title */}
-          <h3 className="text-2xl sm:text-3xl font-semibold text-gray-300 mb-6 text-center">
-            {category.title}
-          </h3>
+          {/* Nav Links */}
+          <ul className="hidden md:flex items-center gap-8 text-gray-300 font-medium">
+            <li>
+              <a
+                href="#about"
+                className="hover:text-white transition"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#skills"
+                className="hover:text-white transition"
+              >
+                Skills
+              </a>
+            </li>
+            <li>
+              <a
+                href="#experience"
+                className="hover:text-white transition"
+              >
+                Experience
+              </a>
+            </li>
+            <li>
+              <a
+                href="#education"
+                className="hover:text-white transition"
+              >
+                Education
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                className="hover:text-white transition"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
 
-          {/* Skills */}
-          <Tilt
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
+          {/* CTA Button */}
+          <a
+            href="#contact"
+            className="hidden md:inline-block px-5 py-2 rounded-full text-sm font-semibold text-white 
+            bg-gradient-to-r from-[#8245ec] to-[#a855f7] hover:scale-105 transition"
           >
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {category.skills.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex items-center justify-center space-x-2 bg-transparent border-2 border-gray-700 
-                             rounded-3xl py-2 px-3 sm:py-3 sm:px-4 text-center min-w-[100px] break-words"
-                >
-                  <img
-                    src={skill.logo}
-                    alt={`${skill.name} logo`}
-                    className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 flex-shrink-0"
-                  />
-                  <span className="text-xs sm:text-sm md:text-base text-gray-300 break-words">
-                    {skill.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </Tilt>
+            Hire Me
+          </a>
         </div>
-      ))}
-    </div>
-  </section>
-);
+      </div>
+    </nav>
+  );
+};
 
-export default Skills;
+export default Navbar;

@@ -6,9 +6,9 @@ import profileImage from '../../assets/profile.JPG';
 const About = () => {
   return (
     <section
-      id="about"
-      className="py-4 px-[4vw] md:px-[6vw] lg:px-[10vw] font-sans mt-8 md:mt-12 lg:mt-16"
-    >
+  id="about"
+  className="min-h-screen flex items-center py-4 px-[4vw] md:px-[6vw] lg:px-[10vw] font-sans mt-8 md:mt-12 lg:mt-16"
+>
       <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 lg:gap-20">
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">

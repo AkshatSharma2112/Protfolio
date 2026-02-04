@@ -19,7 +19,7 @@ import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 
 // Experience Section Logo's
-import hashedbitLogo from './assets/education_logo/hashedbit_logo.png';
+import way2classLogo from './assets/education_logo/way2class_logo.png';
 
 // Education Section Logo's
 import ditLogo from './assets/education_logo/dit_logo.png';
@@ -76,14 +76,16 @@ export const SkillsInfo = [
   export const experiences = [
     {
       id: 0,
-      img: hashedbitLogo,
-      role: "Intern - MERN",
+      img: way2classLogo,
+      role: "XML Intern",
       company: "HashedBit Inovations",
       date: "",
       desc: "",
       skills: [
-        "",
-        
+        "XMl",
+        "HTML",
+        "Automation",
+        "Digital Publishing",
       ],
     },
   ];
@@ -94,7 +96,7 @@ export const SkillsInfo = [
       img: ditLogo,
       school: "DIT University, Dehradun",
       date: "2026",
-      grade: "6.83 CGPA",
+      grade: "6.84 CGPA",
       desc: "I am pursuing my B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence, Machine Learning, and Robotics from DIT University, Dehradun. My academic journey has provided me with a strong foundation in programming, software development, and core computer science principles. I have studied subjects such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Artificial Intelligence, Machine Learning, and Robotics. Along with theoretical knowledge, I have gained hands-on experience through projects, workshops, hackathons, and technical events, which have enhanced my problem-solving, research, and technical skills. My experience at DIT University has been instrumental in shaping my expertise and professional growth in the field of emerging technologies.",
       degree: "B.Tech in Computer Science and Engineering",
     },
