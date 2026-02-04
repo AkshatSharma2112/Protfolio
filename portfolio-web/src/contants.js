@@ -20,6 +20,7 @@ import vercelLogo from './assets/tech_logo/vercel.png';
 
 // Experience Section Logo's
 import way2classLogo from './assets/education_logo/way2class_logo.png';
+import salesforceLogo from './assets/education_logo/salesforce_logo.png';
 
 // Education Section Logo's
 import ditLogo from './assets/education_logo/dit_logo.png';
@@ -79,13 +80,28 @@ export const SkillsInfo = [
       img: way2classLogo,
       role: "XML Intern",
       company: "HashedBit Inovations",
-      date: "",
-      desc: "",
+      date: "27 Jan, 2026",
+      desc: "Working on Elsevier ANI XML conversion and validation, resolving schema errors, structuring bibliographic content, and ensuring XML compliance with XSD standards for journal articles.",
       skills: [
         "XMl",
         "HTML",
         "Automation",
         "Digital Publishing",
+      ],
+    },
+    {
+      id: 1,
+      img: salesforceLogo,
+      role: "SFVIP Intern",
+      company: "Salesforce",
+      date: "23 May, 2025",
+      desc: "Completed an 8-week virtual internship on Salesforce Developer with Agentblazer Champion Program , gaining hands-on experience in Salesforce fundamentals, Apex programming, data & security management, process automation, and Lightning Web Components. Successfully completed multiple superbadges including Apex Specialist and Object Relationships.",
+      skills: [
+        "Apex Programming",
+        "Lightning Web Components (LWC)",
+        "SOQL & Data Modeling",
+        "Salesforce Process Automation (Flows / Workflow)",
+        "Problem Solving"
       ],
     },
   ];

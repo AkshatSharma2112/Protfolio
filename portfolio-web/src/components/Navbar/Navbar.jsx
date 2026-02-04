@@ -9,7 +9,7 @@ const Navbar = () => {
           
           {/* Logo / Name */}
           <div className="text-white font-bold text-xl tracking-wide">
-            <img src={Logo} alt="Logo" className="w-20 h-20 mr-2 inline-block" />
+            <img src={Logo} alt="Logo" className="w-[150px] h-[150px] mr-2 inline-block" />
           </div>
 
           {/* Nav Links */}
